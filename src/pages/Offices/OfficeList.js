@@ -4,9 +4,9 @@ import {
   VerticalLayout,
   HorizontalLayout
 } from "../../components/index";
-import Company from "./Company";
+import Office from "./Office";
 
-const CompanyList = () => (
+const OfficeList = () => (
   <VerticalLayout
     paddingTop="10px"
     paddingRight="10px"
@@ -14,13 +14,13 @@ const CompanyList = () => (
     paddingBottom="10px"
     margin="30px"
   >
-    <TitleLabel fontSize="30px">Companies</TitleLabel>
+    <TitleLabel fontSize="30px">Offices</TitleLabel>
     <HorizontalLayout flexWrap="wrap" customWidth="600px">
-      {[...Array(3).keys()].map(() => (
-        <Company />
+      {[...Array(4).keys()].map(() => (
+        <Office />
       ))}
     </HorizontalLayout>
   </VerticalLayout>
 );
 
-export default CompanyList;
+export default OfficeList;

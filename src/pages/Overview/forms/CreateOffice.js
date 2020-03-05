@@ -6,7 +6,7 @@ import {
   FormInputLabel,
   FormInput,
   FormSelect,
-  SubmitButton
+  Button
 } from "../../../components/index";
 
 const CreateOffice = () => (
@@ -30,7 +30,7 @@ const CreateOffice = () => (
     <FormSelect>
       <option>select company</option>
     </FormSelect>
-    <SubmitButton>Create</SubmitButton>
+    <Button>Create</Button>
   </VerticalLayout>
 );
 

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-export const SubmitButton = styled.div`
-  width: 100%;
+export const Button = styled.div`
+  width: ${props => (props.customWidth ? props.customWidth : "100%")};
   height: 50px;
   display: flex;
   flex-direction: row;

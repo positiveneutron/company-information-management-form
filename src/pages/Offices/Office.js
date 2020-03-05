@@ -7,7 +7,7 @@ import {
   Divider
 } from "../../components/index";
 
-const Company = () => (
+const Office = () => (
   <VerticalLayout
     paddingTop="10px"
     paddingRight="20px"
@@ -20,7 +20,7 @@ const Company = () => (
   >
     <HorizontalLayout justifyContent="space-between" customWidth="230px">
       <Link to={"/offices"}>
-        <TitleLabel clicked>Google</TitleLabel>
+        <TitleLabel clicked>Hangzhou Binjiang Campus</TitleLabel>
       </Link>
       <TitleLabel clicked bold>
         X
@@ -34,18 +34,15 @@ const Company = () => (
       marginLeft="0px"
     />
     <TitleLabel bold fontSize="16px">
-      Address:
+      Location:
     </TitleLabel>
-    <TitleLabel fontSize="16px">Amphitheatre</TitleLabel>
+    <TitleLabel fontSize="16px">Lat - 103.12</TitleLabel>
+    <TitleLabel fontSize="16px">Long - 20.44</TitleLabel>
     <TitleLabel bold fontSize="16px">
-      Revenue:
+      Office Start Date:
     </TitleLabel>
-    <TitleLabel fontSize="16px">12345</TitleLabel>
-    <TitleLabel bold fontSize="16px">
-      Phone No:
-    </TitleLabel>
-    <TitleLabel fontSize="16px">(190) 132323232</TitleLabel>
+    <TitleLabel fontSize="16px">6/20/1997</TitleLabel>
   </VerticalLayout>
 );
 
-export default Company;
+export default Office;

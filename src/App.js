@@ -2,7 +2,7 @@ import React, { Suspense, lazy } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 const OverviewPage = lazy(() => import("./pages/Overview/"));
-const OfficePage = lazy(() => import("./pages/Offices"));
+const OfficePage = lazy(() => import("./pages/Offices/"));
 
 function App() {
   return (

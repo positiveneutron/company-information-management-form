@@ -5,7 +5,7 @@ import {
   TitleLabel,
   FormInputLabel,
   FormInput,
-  SubmitButton
+  Button
 } from "../../../components/index";
 
 const CreateCompany = () => (
@@ -27,7 +27,7 @@ const CreateCompany = () => (
       <FormInput type="number" placeholder="code" customWidth="45px" />
       <FormInput type="number" placeholder="number" marginLeft="10px" />
     </HorizontalLayout>
-    <SubmitButton>Create</SubmitButton>
+    <Button>Create</Button>
   </VerticalLayout>
 );
 
