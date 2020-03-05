@@ -5,6 +5,7 @@ import {
   TitleLabel,
   FormInputLabel,
   FormInput,
+  FormSelect,
   SubmitButton
 } from "../components/index";
 
@@ -35,6 +36,30 @@ const OverviewPage = props => (
         <FormInput type="number" placeholder="code" customWidth="45px" />
         <FormInput type="number" placeholder="number" marginLeft="10px" />
       </HorizontalLayout>
+      <SubmitButton>Create</SubmitButton>
+    </VerticalLayout>
+    <VerticalLayout
+      paddingTop="10px"
+      paddingRight="10px"
+      paddingLeft="10px"
+      paddingBottom="10px"
+      border
+      borderRadius="15px"
+    >
+      <TitleLabel>Create Office</TitleLabel>
+      <FormInputLabel>Name:</FormInputLabel>
+      <FormInput type="text" placeholder="name" />
+      <FormInputLabel>Location:</FormInputLabel>
+      <HorizontalLayout>
+        <FormInput type="number" placeholder="latitude" />
+        <FormInput type="number" placeholder="longitude" marginLeft="10px" />
+      </HorizontalLayout>
+      <FormInputLabel>Office Start Date:</FormInputLabel>
+      <FormInput type="date" placeholder="date" />
+      <FormInputLabel place>Company</FormInputLabel>
+      <FormSelect>
+        <option>select company</option>
+      </FormSelect>
       <SubmitButton>Create</SubmitButton>
     </VerticalLayout>
   </HorizontalLayout>
