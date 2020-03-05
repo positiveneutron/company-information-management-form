@@ -12,7 +12,7 @@ const FormArea = () => (
     margin="30px"
   >
     <CreateCompany />
-    <Divider vertical />
+    <Divider vertical customWidth="1px" customHeight="500px" />
     <CreateOffice />
   </HorizontalLayout>
 );

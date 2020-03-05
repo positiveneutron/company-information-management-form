@@ -3,7 +3,8 @@ import styled from "styled-components";
 export const VerticalLayout = styled.div`
   display: flex;
   flex-direction: column;
-  width: fit-content;
+
+  width: ${props => (props.customWidth ? props.customWidth : "fit-content")};
   justify-content: ${props =>
     props.justifyContent ? props.justifyContent : "flex-start"};
   align-items: ${props => (props.alignItems ? props.alignItems : "flex-start")};

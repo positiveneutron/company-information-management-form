@@ -2,7 +2,9 @@ import styled from "styled-components";
 
 export const HorizontalLayout = styled.div`
   display: flex;
-  width: fit-content;
+  flex-wrap: ${props => (props.flexWrap ? props.flexWrap : "nowrap")};
+  width: ${props => (props.customWidth ? props.customWidth : "fit-content")};
+
   flex-direction: row;
   justify-content: ${props =>
     props.justifyContent ? props.justifyContent : "flex-start"};
