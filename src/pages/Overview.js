@@ -6,7 +6,8 @@ import {
   FormInputLabel,
   FormInput,
   FormSelect,
-  SubmitButton
+  SubmitButton,
+  Divider
 } from "../components/index";
 
 const OverviewPage = props => (
@@ -15,14 +16,15 @@ const OverviewPage = props => (
     paddingRight="10px"
     paddingLeft="10px"
     paddingBottom="10px"
+    margin="30px"
+    border
+    borderRadius="15px"
   >
     <VerticalLayout
       paddingTop="10px"
       paddingRight="10px"
       paddingLeft="10px"
       paddingBottom="10px"
-      border
-      borderRadius="15px"
     >
       <TitleLabel>Create Company</TitleLabel>
       <FormInputLabel>Name:</FormInputLabel>
@@ -38,13 +40,12 @@ const OverviewPage = props => (
       </HorizontalLayout>
       <SubmitButton>Create</SubmitButton>
     </VerticalLayout>
+    <Divider vertical />
     <VerticalLayout
       paddingTop="10px"
       paddingRight="10px"
       paddingLeft="10px"
       paddingBottom="10px"
-      border
-      borderRadius="15px"
     >
       <TitleLabel>Create Office</TitleLabel>
       <FormInputLabel>Name:</FormInputLabel>
