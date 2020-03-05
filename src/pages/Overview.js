@@ -1,11 +1,43 @@
 import React from "react";
-import { TitleLabel, SubmitButton } from "../components/index";
+import {
+  HorizontalLayout,
+  VerticalLayout,
+  TitleLabel,
+  FormInputLabel,
+  FormInput,
+  SubmitButton
+} from "../components/index";
 
 const OverviewPage = props => (
-  <React.Fragment>
-    <TitleLabel>Create Company</TitleLabel>
-    <SubmitButton>Create</SubmitButton>
-  </React.Fragment>
+  <HorizontalLayout
+    paddingTop="10px"
+    paddingRight="10px"
+    paddingLeft="10px"
+    paddingBottom="10px"
+  >
+    <VerticalLayout
+      paddingTop="10px"
+      paddingRight="10px"
+      paddingLeft="10px"
+      paddingBottom="10px"
+      border
+      borderRadius="15px"
+    >
+      <TitleLabel>Create Company</TitleLabel>
+      <FormInputLabel>Name:</FormInputLabel>
+      <FormInput type="text" placeholder="name" />
+      <FormInputLabel>Address:</FormInputLabel>
+      <FormInput type="text" placeholder="address" />
+      <FormInputLabel>Revenue:</FormInputLabel>
+      <FormInput type="number" placeholder="revenue" />
+      <FormInputLabel>Phone No:</FormInputLabel>
+      <HorizontalLayout>
+        <FormInput type="number" placeholder="code" customWidth="45px" />
+        <FormInput type="number" placeholder="number" marginLeft="10px" />
+      </HorizontalLayout>
+      <SubmitButton>Create</SubmitButton>
+    </VerticalLayout>
+  </HorizontalLayout>
 );
 
 export default OverviewPage;
