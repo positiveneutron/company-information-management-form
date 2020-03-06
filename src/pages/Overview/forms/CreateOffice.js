@@ -79,6 +79,25 @@ const CreateOffice = () => {
     );
   };
 
+  const officeLatitudeValidation = e => {
+    console.log(e.target);
+    if (parseFloat(e.target.value) > 0) {
+      setOfficeLatitude(parseFloat(e.target.value));
+    } else {
+      e.target.value = null;
+      setOfficeLatitude(null);
+    }
+  };
+
+  const officeLongitudeValidation = e => {
+    if (parseFloat(e.target.value) > 0) {
+      setOfficeLongitude(parseFloat(e.target.value));
+    } else {
+      e.target.value = null;
+      setOfficeLongitude(null);
+    }
+  };
+
   return (
     <VerticalLayout
       paddingTop="10px"
@@ -100,14 +119,14 @@ const CreateOffice = () => {
           type="number"
           placeholder="latitude"
           value={officeLatitude}
-          onChange={e => setOfficeLatitude(e.target.value)}
+          onChange={e => officeLatitudeValidation(e)}
         />
         <FormInput
           type="number"
           placeholder="longitude"
           marginLeft="10px"
           value={officeLongitude}
-          onChange={e => setOfficeLongitude(e.target.value)}
+          onChange={e => officeLongitudeValidation(e)}
         />
       </HorizontalLayout>
       <FormInputLabel>Office Start Date:</FormInputLabel>
