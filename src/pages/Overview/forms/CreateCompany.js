@@ -9,11 +9,11 @@ import {
 } from "../../../components/index";
 
 const CreateCompany = () => {
-  const [companyName, setCompanyName] = useState(null);
-  const [address, setAddress] = useState(null);
-  const [revenue, setRevenue] = useState(null);
-  const [phoneCode, setPhoneCode] = useState(null);
-  const [phoneNumber, setPhoneNumber] = useState(null);
+  const [companyName, setCompanyName] = useState("");
+  const [address, setAddress] = useState("");
+  const [revenue, setRevenue] = useState("");
+  const [phoneCode, setPhoneCode] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
   const [
     showSubmitButtonValidationMessage,
     isShowSubmitButtonValidationMessage
@@ -21,11 +21,11 @@ const CreateCompany = () => {
 
   const submitValidation = () => {
     if (
-      companyName === null ||
-      address === null ||
-      revenue === null ||
-      phoneCode === null ||
-      phoneNumber === null
+      companyName === "" ||
+      address === "" ||
+      revenue === "" ||
+      phoneCode === "" ||
+      phoneNumber === ""
     ) {
       return isShowSubmitButtonValidationMessage(true);
     } else {
@@ -38,35 +38,35 @@ const CreateCompany = () => {
     return (
       <React.Fragment>
         <ul>
-          {companyName === null && (
+          {companyName === "" && (
             <li>
               <TitleLabel fontSize="17px">
                 Company Name field must be filled to Submit
               </TitleLabel>
             </li>
           )}
-          {address === null && (
+          {address === "" && (
             <li>
               <TitleLabel fontSize="17px">
                 Address field must be filled to Submit
               </TitleLabel>
             </li>
           )}
-          {revenue === null && (
+          {revenue === "" && (
             <li>
               <TitleLabel fontSize="17px">
                 Revenue field must be filled to Submit
               </TitleLabel>
             </li>
           )}
-          {phoneCode === null && (
+          {phoneCode === "" && (
             <li>
               <TitleLabel fontSize="17px">
                 Phone Code field must be filled to Submit
               </TitleLabel>
             </li>
           )}
-          {phoneNumber === null && (
+          {phoneNumber === "" && (
             <li>
               <TitleLabel fontSize="17px">
                 Phone Number field must be filled to Submit
@@ -103,7 +103,7 @@ const CreateCompany = () => {
       e.target.value = null;
       setPhoneNumber(null);
     }
-  };
+  }; //.
 
   return (
     <VerticalLayout

@@ -16,8 +16,8 @@ const CompanyList = () => (
   >
     <TitleLabel fontSize="30px">Companies</TitleLabel>
     <HorizontalLayout flexWrap="wrap" customWidth="600px">
-      {[...Array(3).keys()].map(() => (
-        <Company />
+      {[...Array(3).keys()].map(index => (
+        <Company key={index} />
       ))}
     </HorizontalLayout>
   </VerticalLayout>
