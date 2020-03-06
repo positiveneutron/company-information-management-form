@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import {
   HorizontalLayout,
   VerticalLayout,
@@ -20,6 +20,7 @@ const CreateCompany = () => {
     isShowSubmitButtonValidationMessage
   ] = useState(false);
   const createCompanyDispatch = useDispatch();
+  const companies = useSelector(state => state.companies);
 
   const submitValidation = () => {
     if (
@@ -34,6 +35,7 @@ const CreateCompany = () => {
       createCompanyDispatch({
         type: "CREATE_COMPANY",
         newCompany: {
+          id: companies.length + 1,
           name: companyName,
           address: address,
           revenue: revenue,

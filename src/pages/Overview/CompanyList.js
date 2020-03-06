@@ -21,8 +21,8 @@ const CompanyList = () => {
       <TitleLabel fontSize="30px">Companies</TitleLabel>
       <HorizontalLayout flexWrap="wrap" customWidth="600px">
         {companies.length > 0 ? (
-          companies.map((company, index) => (
-            <div key={index}>
+          companies.map(company => (
+            <div key={company.id}>
               <Company data={company} />
             </div>
           ))
