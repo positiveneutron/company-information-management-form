@@ -80,10 +80,28 @@ const CreateCompany = () => {
 
   const revenueValidation = e => {
     if (Math.floor(e.target.value) > 0) {
-      setRevenue(e.target.value);
+      setRevenue(Math.floor(e.target.value));
     } else {
       e.target.value = null;
       setRevenue(null);
+    }
+  };
+
+  const phoneCodeValidation = e => {
+    if (parseInt(e.target.value) > 0) {
+      setPhoneCode(parseInt(e.target.value));
+    } else {
+      e.target.value = null;
+      setPhoneCode(null);
+    }
+  };
+
+  const phoneNumberValidation = e => {
+    if (parseInt(e.target.value) > 0) {
+      setPhoneNumber(parseInt(e.target.value));
+    } else {
+      e.target.value = null;
+      setPhoneNumber(null);
     }
   };
 
@@ -123,14 +141,14 @@ const CreateCompany = () => {
           placeholder="code"
           customWidth="45px"
           value={phoneCode}
-          onChange={e => setPhoneCode(e.target.value)}
+          onChange={e => phoneCodeValidation(e)}
         />
         <FormInput
           type="number"
           placeholder="number"
           marginLeft="10px"
           value={phoneNumber}
-          onChange={e => setPhoneNumber(e.target.value)}
+          onChange={e => phoneNumberValidation(e)}
         />
       </HorizontalLayout>
       <Button onClick={() => submitValidation()}>Create</Button>
