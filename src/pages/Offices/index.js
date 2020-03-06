@@ -49,7 +49,7 @@ const Container = () => {
         </HorizontalLayout>
       </VerticalLayout>
       <Divider horizontal customWidth="530px" customHeight="1px" />
-      <OfficeList />
+      <OfficeList companyId={companyId} />
     </VerticalLayout>
   );
 };
