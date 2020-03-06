@@ -1,3 +1,5 @@
+# Company Information Management Form
+
 This project has been hosted on <b>NodeJS server application</b>, you can access by clicking [this](http://).
 
 ## The expected functionality are shown as below:
@@ -39,8 +41,8 @@ This project has been hosted on <b>NodeJS server application</b>, you can access
    confirmation need to be shown out and after confirming, the widget will be
    removed.
 
-• If there is no company created in the overview page yet, message “there is no
-companies created yet” should be displayed in the “Companies” section.
+- If there is no company created in the overview page yet, message “there is no
+  companies created yet” should be displayed in the “Companies” section.
 
 ### Offices page
 
