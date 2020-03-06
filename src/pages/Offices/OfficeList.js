@@ -20,11 +20,13 @@ const OfficeList = ({ companyId }) => {
     >
       <TitleLabel fontSize="30px">Offices</TitleLabel>
       <HorizontalLayout flexWrap="wrap" customWidth="600px">
-        {offices
-          .filter(office => office.companyId === parseInt(companyId))
-          .map((office, index) => (
-            <Office key={index} data={office} />
-          ))}
+        {offices.length > 0 ? (
+          offices
+            .filter(office => office.companyId === parseInt(companyId))
+            .map((office, index) => <Office key={index} data={office} />)
+        ) : (
+          <TitleLabel>there is no office created yet</TitleLabel>
+        )}
       </HorizontalLayout>
     </VerticalLayout>
   );
