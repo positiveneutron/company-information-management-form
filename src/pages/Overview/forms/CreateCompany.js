@@ -37,33 +37,54 @@ const CreateCompany = () => {
   const SubmitButtonValidationMessage = () => {
     return (
       <React.Fragment>
-        {companyName === null && (
-          <TitleLabel fontSize="17px">
-            Company Name field must be filled to Submit
-          </TitleLabel>
-        )}
-        {address === null && (
-          <TitleLabel fontSize="17px">
-            Address field must be filled to Submit
-          </TitleLabel>
-        )}
-        {revenue === null && (
-          <TitleLabel fontSize="17px">
-            Revenue field must be filled to Submit
-          </TitleLabel>
-        )}
-        {phoneCode === null && (
-          <TitleLabel fontSize="17px">
-            Phone Code field must be filled to Submit
-          </TitleLabel>
-        )}
-        {phoneNumber === null && (
-          <TitleLabel fontSize="17px">
-            Phone Number field must be filled to Submit
-          </TitleLabel>
-        )}
+        <ul>
+          {companyName === null && (
+            <li>
+              <TitleLabel fontSize="17px">
+                Company Name field must be filled to Submit
+              </TitleLabel>
+            </li>
+          )}
+          {address === null && (
+            <li>
+              <TitleLabel fontSize="17px">
+                Address field must be filled to Submit
+              </TitleLabel>
+            </li>
+          )}
+          {revenue === null && (
+            <li>
+              <TitleLabel fontSize="17px">
+                Revenue field must be filled to Submit
+              </TitleLabel>
+            </li>
+          )}
+          {phoneCode === null && (
+            <li>
+              <TitleLabel fontSize="17px">
+                Phone Code field must be filled to Submit
+              </TitleLabel>
+            </li>
+          )}
+          {phoneNumber === null && (
+            <li>
+              <TitleLabel fontSize="17px">
+                Phone Number field must be filled to Submit
+              </TitleLabel>
+            </li>
+          )}
+        </ul>
       </React.Fragment>
     );
+  };
+
+  const revenueValidation = e => {
+    if (Math.floor(e.target.value) > 0) {
+      setRevenue(e.target.value);
+    } else {
+      e.target.value = null;
+      setRevenue(null);
+    }
   };
 
   return (
@@ -88,12 +109,12 @@ const CreateCompany = () => {
         value={address}
         onChange={e => setAddress(e.target.value)}
       />
-      <FormInputLabel>Revenue:</FormInputLabel>
+      <FormInputLabel>Revenue: </FormInputLabel>
       <FormInput
         type="number"
         placeholder="revenue"
         value={revenue}
-        onChange={e => setRevenue(e.target.value)}
+        onChange={e => revenueValidation(e)}
       />
       <FormInputLabel>Phone No:</FormInputLabel>
       <HorizontalLayout>
