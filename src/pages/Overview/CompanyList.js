@@ -21,7 +21,11 @@ const CompanyList = () => {
       <TitleLabel fontSize="30px">Companies</TitleLabel>
       <HorizontalLayout flexWrap="wrap" customWidth="600px">
         {companies.length > 0 ? (
-          [...Array(3).keys()].map(index => <Company key={index} />)
+          companies.map((company, index) => (
+            <div key={index}>
+              <Company data={company} />
+            </div>
+          ))
         ) : (
           <TitleLabel>there is no companies created yet</TitleLabel>
         )}

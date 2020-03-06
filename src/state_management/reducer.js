@@ -7,9 +7,7 @@ export const rootReducer = (state = initialState, action) => {
     case "GET_COMPANIES":
       return { companies: state.companies };
     case "CREATE_COMPANY":
-      state.companies.push(action.newCompany);
-      console.log("current companies", state.companies);
-      return { companies: state.companies };
+      return { ...state, companies: state.companies.concat(action.newCompany) };
     default:
       return state;
   }

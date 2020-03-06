@@ -31,7 +31,7 @@ const CreateCompany = () => {
     ) {
       return isShowSubmitButtonValidationMessage(true);
     } else {
-      return createCompanyDispatch({
+      createCompanyDispatch({
         type: "CREATE_COMPANY",
         newCompany: {
           name: companyName,
@@ -40,6 +40,12 @@ const CreateCompany = () => {
           phoneNumber: `(${phoneCode}) ${phoneNumber}`
         }
       });
+      setCompanyName("");
+      setAddress("");
+      setRevenue("");
+      setPhoneCode("");
+      setPhoneNumber("");
+      isShowSubmitButtonValidationMessage("");
     }
   };
 
