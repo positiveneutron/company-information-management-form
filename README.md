@@ -1,7 +1,7 @@
 # Company Information Management Form
 
 - This project has been hosted on <b>NodeJS server application</b>, you can access by clicking [this](https://company-information-management-form-bny8u47qd.now.sh/).
-- The systemd design solution documented on [here]().
+- The systemd design solution documented on [here](https://github.com/positiveneutron/company-information-management-form/blob/master/ProSpaceSystemDesignSolution.pdf).
 
 ## The expected functionality are shown as below:
 
