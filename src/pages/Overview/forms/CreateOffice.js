@@ -153,7 +153,7 @@ const CreateOffice = () => {
         value={officeStartDate}
         onChange={e => setOfficeStartDate(e.target.value)}
       />
-      <FormInputLabel place>Company {company}</FormInputLabel>
+      <FormInputLabel place>Company</FormInputLabel>
       <FormSelect value={company} onChange={e => setCompany(e.target.value)}>
         <option selected="true" disabled="disabled" value="">
           select company

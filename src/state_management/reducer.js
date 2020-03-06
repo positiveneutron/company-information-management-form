@@ -17,6 +17,11 @@ export const rootReducer = (state = initialState, action) => {
     case "CREATE_OFFICE":
       console.log("action.newOffice", action.newOffice);
       return { ...state, offices: state.offices.concat(action.newOffice) };
+    case "DELETE_OFFICE":
+      return {
+        ...state,
+        offices: state.offices.filter(office => office.id !== action.officeId)
+      };
     default:
       return state;
   }
