@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 import {
   HorizontalLayout,
   VerticalLayout,
@@ -18,6 +19,7 @@ const CreateCompany = () => {
     showSubmitButtonValidationMessage,
     isShowSubmitButtonValidationMessage
   ] = useState(false);
+  const createCompanyDispatch = useDispatch();
 
   const submitValidation = () => {
     if (
@@ -29,8 +31,15 @@ const CreateCompany = () => {
     ) {
       return isShowSubmitButtonValidationMessage(true);
     } else {
-      //redux action
-      return console.log("redux to send an action");
+      return createCompanyDispatch({
+        type: "CREATE_COMPANY",
+        newCompany: {
+          name: companyName,
+          address: address,
+          revenue: revenue,
+          phoneNumber: `(${phoneCode}) ${phoneNumber}`
+        }
+      });
     }
   };
 
