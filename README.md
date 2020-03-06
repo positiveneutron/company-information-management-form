@@ -1,68 +1,59 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project has hosted on <b>NodeJS server application</b>, you can access by clicking [this](http://).
 
-## Available Scripts
+## The expected functionality are shown as below:
 
-In the project directory, you can run:
+### Overview page
 
-### `yarn start`
+- The section titled “create company” should be able to create new company after
+  filling in necessary information to the form and click the “Create” button. Moreover, necessary form validations are required, specifically,
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. Form cannot be submitted when any of input box is empty, and necessary
+   required warning message (label or tooltip) should be shown for the invalid
+   inputs.
+2. Revenue input should be positive floor number.
+3. Two fields of phone number should be both positive integer. Bonus if you can
+   implement country code selection for the “code” input.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- The section titled “create office” should be able to create new office under selected
+  company after filling in necessary information to the form and click the “Create”
+  button. Moreover, necessary form validations are required, specifically,
 
-### `yarn test`
+1. Form cannot be submitted when any of input box is empty or unselected, and
+   necessary required warning message (label or tooltip) should be shown for the
+   invalid inputs.
+2. Two input fields under location should be both positive float number.
+3. Input “Office Start Date” should be able to pop up calendar for user to select
+   the date instead of typing in the date string.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- When successfully creating a new company, proper notification message should be
+  shown and new company information should appear in the section titled
+  “Companies” as a new widget. Moreover, the form should be reset for further use.
 
-### `yarn build`
+- For each of the company widget under the section titled “Companies”,
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. It need to display the company profile information in the format shown in the
+   overview page.
+2. Each company widget is also clickable, which will redirect user to
+   corresponding offices page.
+3. When clicking the cross button on the top right corner, a pop up for
+   confirmation need to be shown out and after confirming, the widget will be
+   removed.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+• If there is no company created in the overview page yet, message “there is no
+companies created yet” should be displayed in the “Companies” section.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Offices page
 
-### `yarn eject`
+- As the design above shown, company information as well as the information for
+  each office need to be display accordingly. When a new office created in the
+  overview page for one company, it needs to be automatically shown for the offices
+  page of this company.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- For each office widget in section titled “offices”, when clicking the cross button on
+  the top right corner, a pop up for confirmation need to be shown out and after
+  confirming, the widget will be removed.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- If there is no office in the offices page yet, message “there is no office created yet”
+  should be displayed in the “offices” section.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- When clicking the “Back to Overview” page, user will be redirect to the overview page.

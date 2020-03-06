@@ -70,7 +70,7 @@ const CreateOffice = () => {
           {company === "" && (
             <li>
               <TitleLabel fontSize="17px">
-                Company field must be choosed to Submit
+                Company field must be choosen to Submit
               </TitleLabel>
             </li>
           )}
@@ -80,7 +80,6 @@ const CreateOffice = () => {
   };
 
   const officeLatitudeValidation = e => {
-    console.log(e.target);
     if (parseFloat(e.target.value) > 0) {
       setOfficeLatitude(parseFloat(e.target.value));
     } else {
