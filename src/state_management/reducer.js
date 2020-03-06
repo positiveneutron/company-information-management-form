@@ -1,23 +1,6 @@
 const initialState = {
   companies: [],
-  offices: [
-    {
-      id: 1,
-      companyId: 1,
-      name: "1st office",
-      latitude: 12,
-      longitude: 13,
-      startDate: "12/12/12"
-    },
-    {
-      id: 2,
-      companyId: 2,
-      name: "xp",
-      latitude: 12,
-      longitude: 13,
-      startDate: "12/12/12"
-    }
-  ]
+  offices: []
 };
 
 export const rootReducer = (state = initialState, action) => {
@@ -31,6 +14,9 @@ export const rootReducer = (state = initialState, action) => {
           company => company.id !== action.companyId
         )
       };
+    case "CREATE_OFFICE":
+      console.log("action.newOffice", action.newOffice);
+      return { ...state, offices: state.offices.concat(action.newOffice) };
     default:
       return state;
   }

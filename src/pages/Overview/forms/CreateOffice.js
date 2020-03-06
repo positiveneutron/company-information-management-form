@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import {
   HorizontalLayout,
   VerticalLayout,
@@ -19,6 +20,9 @@ const CreateOffice = () => {
     showSubmitButtonValidationMessage,
     isShowSubmitButtonValidationMessage
   ] = useState(false);
+  const companies = useSelector(state => state.companies);
+  const offices = useSelector(state => state.offices);
+  const createOfficeDispatch = useDispatch();
 
   const submitValidation = () => {
     if (
@@ -30,8 +34,22 @@ const CreateOffice = () => {
     ) {
       return isShowSubmitButtonValidationMessage(true);
     } else {
-      //redux action
-      return console.log("redux to send an action");
+      createOfficeDispatch({
+        type: "CREATE_OFFICE",
+        newOffice: {
+          id: offices.length + 1,
+          companyId: parseInt(company),
+          name: officeName,
+          latitude: officeLongitude,
+          longitude: officeLongitude,
+          startDate: officeStartDate
+        }
+      });
+      setOfficeName("");
+      setOfficeLatitude("");
+      setOfficeLongitude("");
+      setOfficeStartDate("");
+      setCompany("");
     }
   };
 
@@ -135,9 +153,16 @@ const CreateOffice = () => {
         value={officeStartDate}
         onChange={e => setOfficeStartDate(e.target.value)}
       />
-      <FormInputLabel place>Company</FormInputLabel>
+      <FormInputLabel place>Company {company}</FormInputLabel>
       <FormSelect value={company} onChange={e => setCompany(e.target.value)}>
-        <option>select company</option>
+        <option selected="true" disabled="disabled" value="">
+          select company
+        </option>
+        {companies.map((company, index) => (
+          <option key={index} value={company.id}>
+            {company.name}
+          </option>
+        ))}
       </FormSelect>
       <Button onClick={() => submitValidation()}>Create</Button>
       {showSubmitButtonValidationMessage && <SubmitButtonValidationMessage />}
