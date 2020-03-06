@@ -20,7 +20,7 @@ const Company = ({ key, data }) => (
     key={key}
   >
     <HorizontalLayout justifyContent="space-between" customWidth="230px">
-      <Link to={"/offices"}>
+      <Link to={`/offices/${data.id}`}>
         <TitleLabel clicked>{data.name}</TitleLabel>
       </Link>
       <TitleLabel clicked bold>
