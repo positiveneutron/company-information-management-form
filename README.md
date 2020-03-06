@@ -1,6 +1,6 @@
 # Company Information Management Form
 
-This project has been hosted on <b>NodeJS server application</b>, you can access by clicking [this](http://).
+This project has been hosted on <b>NodeJS server application</b>, you can access by clicking [this](https://company-information-management-form-bny8u47qd.now.sh/).
 
 ## The expected functionality are shown as below:
 
